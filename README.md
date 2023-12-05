@@ -1,4 +1,4 @@
-# Department-Table-SQL
+# Department Table-SQL
 Week 9 module challenge - the basic of SQL
 
 This module challenges in utilising the PostregSQL through pgAdmin in order to create tables and link through the use of 'Primary and foreign keys'. The visualisation of entity relationship diagram (ERD) is
