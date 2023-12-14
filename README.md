@@ -1,8 +1,12 @@
 # Department Table-SQL
-Week 9 module challenge - the basic of SQL
 
 This module challenges in utilising the PostregSQL through pgAdmin in order to create tables and link through the use of 'Primary and foreign keys'. The visualisation of entity relationship diagram (ERD) is
 also used to provide a visual look of which tables are connect through which keys.<br/>
+
+The module contains several csv files, each containing details that provide values per row. Although the table contents are small, in the industry, most company will have table that contains thousands of rows. Hence manually searching 
+will be time consuming. The benefit for SQL and thus the imporatance of being challenged in using PostRegSQL, is that it can be used to structure proper information easily and efficiently where instead of one massive table, that dataset can be
+broken into small tables which can be connected, Additionally, this makes it more efficient in editing the dataset should a client request a change. <br/>
+With the csv files, the first step was to figure out which columns among the table are connected through an ERD diagram <br/>
 
 ## ERD
 For the data modelling, the ERD is used as a visual display in order to determine which table would need to be linked to, as well as which column have in common and which can be used as primary keys.
