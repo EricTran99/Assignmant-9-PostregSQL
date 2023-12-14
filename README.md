@@ -22,5 +22,50 @@ name of the table names to know which goes to which. However, for the "employees
 which is below the create table for employees_key_list. <br/>
 So create the table, run the alter database, and then import the employee csv file to the table. <br/>
 
-For the second part of the module, there are list of questions which required to use the tables created in order to select certain columns and showcase the results. Each questions has an individual coding sequences which
-can be run to show the results relating to the questions (the questions are also shown as description in the SQL). <br/>
+```
+CREATE TABLE title_key_list (
+	title_id VARCHAR (30) PRIMARY KEY,
+	title VARCHAR (30)
+);
+
+CREATE TABLE salaries_key_list (
+	emp_no INTEGER PRIMARY KEY,
+	salary INTEGER
+);
+
+CREATE TABLE department_key_list (
+	dept_no VARCHAR (30) PRIMARY KEY,	
+	dept_name VARCHAR (30),
+	UNIQUE (dept_no)
+);
+
+CREATE TABLE dept_manager_key_list (
+  emp_no INTEGER,
+  FOREIGN KEY (emp_no) REFERENCES salaries_key_list(emp_no),
+  dept_no VARCHAR (30),
+  FOREIGN KEY (dept_no) REFERENCES department_key_list(dept_no),
+	PRIMARY KEY (emp_no,dept_no)
+);
+
+CREATE TABLE dept_emp_key_list (
+  emp_no INTEGER,
+  FOREIGN KEY (emp_no) REFERENCES salaries_key_list(emp_no),
+  dept_no VARCHAR (30),
+  FOREIGN KEY (dept_no) REFERENCES department_key_list(dept_no),
+	PRIMARY KEY (emp_no,dept_no)
+);
+
+CREATE TABLE employees_key_list (
+	 emp_no INTEGER PRIMARY KEY,
+  FOREIGN KEY (emp_no) REFERENCES salaries_key_list(emp_no),
+	emp_title VARCHAR, 
+	birth_date date,
+	first_name VARCHAR,
+	last_name VARCHAR,
+	sex VARCHAR,
+	hire_date date
+);
+
+```
+Each of the create table code are based on the csv file including the table names, the connections between the primary and foreign keys are based on the ERD diagrams. with the setted tables, the second half of the project stems on testing whether the
+table recieves the correct information and row. Those script can be found in the SQL files and it was edited through pgAdmin.
