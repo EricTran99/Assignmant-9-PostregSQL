@@ -71,5 +71,6 @@ CREATE TABLE employees_key_list (
 );
 
 ```
-Each of the create table code are based on the csv file including the table names, the connections between the primary and foreign keys are based on the ERD diagrams. with the setted tables, the second half of the project stems on testing whether the
-table recieves the correct information and row. Those script can be found in the SQL files and it was edited through pgAdmin.
+## Summary
+
+The process in having mutiple tables align with one another due to similar values is shown through the coding script in the SQL script. Though it was difficult to see the connection, the ERD diagram help give users an easy way in understand which columns are connected to other tables, highlighting the SQL benefits. The file shows numerous questions in the SQL script which are search request where the **select** command is used along with filters specific to the request. This is to show whether the tables have successfully connected the keys properly. 
